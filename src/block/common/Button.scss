@@ -1,0 +1,23 @@
+.Button {
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-xs);
+
+    padding: 7px 0px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    &-Icon, &-Text {
+        vertical-align: middle;
+    }
+
+    &_back {
+        color: var(--color-gray);
+
+        .Button-Icon {
+            margin-right: 6px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.BranchList {
+    &-Name {
+        font-weight: var(--font-weight-medium);
+
+        margin-right: auto;
+    }
+
+    &-Icon {
+        margin-right: 8px;
+    }
+
+    &-CommitHash {
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 95%;
+
+            margin-top: 8px;
+        }
+    }
+}

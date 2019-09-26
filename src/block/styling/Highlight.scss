@@ -1,0 +1,35 @@
+.Highlight {
+    &_java {
+        &_comment {
+            color: #008F00;;
+        }
+        
+        &_import, &_method_type {
+            color: #0433FF;
+        }
+
+        &_method_name, &_arg_type {
+            color: #B4261A;
+        }
+    }
+
+    &_python {
+        &_comment {
+            color: #8694A2;
+        }
+
+        &_import, &_reserved_word {
+            font-weight: var(--font-weight-medium);
+            color: #00234B;
+        }
+
+        &_string_literal {
+            color: #005FBA;
+        }
+
+        &_method_name {
+            font-weight: var(--font-weight-medium);
+            color: #005FBA;
+        }
+    }
+}

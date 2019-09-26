@@ -1,0 +1,53 @@
+.Page {
+    margin: 0;
+
+    &-Block {
+        margin-left: var(--content-padding-h);
+        margin-right: var(--content-padding-h);
+
+        &_no_margin_h {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &-Nav {
+        margin-top: var(--margin-nav);
+    }
+
+    &-History {
+        margin-top: 6px;
+    }
+
+    &-BranchList {
+        margin-bottom: 50px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            .Table-Header {
+                display: none;
+            }
+        }
+    }
+
+    &-Commit {
+        margin-top: 16px;
+        margin-bottom: 24px
+    }
+
+    &-FileEditor {
+        margin-top: 16px;
+        margin-bottom: 12px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &-Diff {
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}

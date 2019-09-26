@@ -1,0 +1,247 @@
+.FileView {
+    &-Header {
+        font-size: var(--font-size-m);
+        line-height: var(--line-height-m);
+
+        background-color: #F5F5F5;
+
+        padding: 5px 16px 7px;
+
+        border: 1px solid var(--divider-color);
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+
+        &_diff {
+            padding: 13px 16px 9px;
+        }
+    }
+
+    &-Mode {
+        margin-right: 12px;
+
+        &_M {
+            color: #6B69C7;
+        }
+    }
+
+    &-Icon {
+        margin-right: 12px;
+
+        
+    }
+
+    &-Mode, &-Icon, &-Filename {
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &-Filename {
+        font-size: var(--font-size-m);
+        margin-right: 4px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            max-width: 80%;
+
+            white-space: nowrap;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &-Filesize {
+        color: #999999;
+        font-size: var(--font-size-s);
+    }
+
+    &-Inserted {
+        color: #19BC4D;
+
+        margin-left: auto;
+        margin-right: 16px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin-left: 0;
+            margin-right: 12px;
+        }        
+    }
+
+    &-Deleted {
+        color: var(--color-accent-2);
+    }
+
+    &-Download {
+        padding: 7px 11px 6px;
+        margin-left: auto;
+
+        border-radius: 3px;
+        border: 1px solid #CCCCCC;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: none;
+        }
+    }
+
+    &-Clone {
+        margin-left: 24px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin-left: auto;
+        }
+    }
+
+    &-FileContent {
+        font-family: 'PT Mono';
+
+        color: #00234B;
+
+        // padding: 7px 31px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        border: 1px solid var(--divider-color);
+        border-top: none;
+
+        &_text_content {
+            font-family: sans-serif;
+
+            color: var(--text-color-base);
+
+            padding-top: 24px;
+            padding-bottom: 24px;
+            padding-left: var(--content-padding-h);
+            padding-right: 216px;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                padding-top: 16px;
+                padding-right: 24px;
+                padding-left: 24px;
+            }
+        }
+
+        &_diff {
+            color: var(--text-color-base);
+
+            padding: 0px;
+        }
+    }
+
+    &-Paragraph {
+        margin-bottom: 20px;
+
+        :last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+
+    &-Line {
+        display: flex;
+
+        font-size: var(--font-size-xs);
+        line-height: var(--line-height-m);
+
+        padding-left: 31px;
+        padding-right: 31px;
+    
+        &_addition {
+            background-color: var(--color-diff-addition);
+        }
+
+        &_deletion {
+            background-color: var(--color-diff-deletion);
+        }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            padding-left: 23px;
+            padding-right: 23px;
+        }
+    }
+
+    &-DiffLine {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &-DiffInfo {
+        display: flex;
+
+        background-color: #F1F8FF;
+
+        padding: 7px 11px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            padding-left: 16px;
+        }
+    }
+
+    &-HunkInfo {
+        color: var(--color-light);
+
+        white-space: pre;
+    }
+
+    &-Above, &-Below {
+        cursor: pointer;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: none;
+        }
+    }
+
+    &-Aligner {
+        flex: 1;
+    }
+
+    &-Below {
+        color: var(--color-light);
+        margin-right: 32px;
+    }
+
+    &-LineNumber {
+        display: inline-block;
+
+        width: 14px;
+
+        color: #999999;
+
+        text-align: right;
+
+        margin-right: 32px;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+
+        &_original {
+            margin-left: 27px;
+            margin-right: 27px;
+        }
+
+        &_modified {
+            margin-right: 29px;
+        }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            min-width: 14px;
+
+            margin-right: 12px;
+
+            &_original {
+                margin-right: 16px;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    &-LineText {
+        white-space: pre-wrap;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            max-width: 85%;
+
+            word-wrap: anywhere;
+        }
+    }
+}
+

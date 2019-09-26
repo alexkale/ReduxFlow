@@ -1,0 +1,88 @@
+.CommitInfo {
+    &-Heading {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-bottom: 5px;
+    }
+
+    &-Title {
+        font-size: var(--font-size-xxxl);
+        font-weight: var(--font-weight-medium);
+        line-height: var(--line-height-xxxl);
+
+        order: 1;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            font-size: var(--font-size-xxl);
+
+            width: 100%;
+
+            margin-top: 12px;
+            margin-bottom: 8px;
+
+            order: 2;
+        }
+    }
+
+    &-ButtonBack {
+        display: none;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: block;
+        }
+    }
+
+    &-ShowFiles {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        order: 2;
+
+        cursor: pointer;
+
+        font-size: var(--font-size-s);
+        line-height: var(--line-height-xs);
+
+        padding: 7px 12px;
+        margin-left: auto;
+
+        background-color: #E6E6E6;
+
+        border-radius: 4px;
+
+        .Icon {
+            margin-right: 6px;
+        }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            order: 1;
+        }
+    }
+
+    &-Hash, &-Author {
+        font-size: var(--font-size-l);
+        line-height: var(--line-height-m);
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            font-size: var(--font-size-m);
+        }
+    }
+
+    &-Author {
+        color: #434445;
+
+        .Name {
+            color: #434445;
+        }
+    }
+
+    &-Hash {
+        margin-right: 8px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin: 0;
+        }
+    }
+}

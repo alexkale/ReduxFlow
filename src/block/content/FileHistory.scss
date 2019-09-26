@@ -1,0 +1,88 @@
+.FileHistory {
+    padding: 8px 0px 24px;
+
+    &-Day {
+        margin-top: 16px;
+    }
+
+    &-Date {
+        font-size: var(--font-size-l);
+        line-height: var(--line-height-m);
+
+        color: var(--color-gray);
+
+        margin-bottom: 2px;
+    }
+
+    &-Item {
+        position: relative;
+        display: flex;
+
+        margin-top: 14px;
+
+        &:after {
+            content: '';
+
+            position: absolute;
+            /* Icon height + margin */
+            top: 42px;
+            /* Half of icon width - 1px (half of self width) */
+            left: 19px;
+
+            background-color: var(--color-light);
+
+            width: 0px;
+            height: 32px;
+
+            border-left: 1px solid var(--color-light);
+            border-right: 1px solid var(--color-light);
+            border-radius: 10px;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                height: 68px;
+            }
+        }
+
+        &:last-of-type {
+            &:after {
+                content: none;
+            }
+        }
+    }
+
+    &-Icon {
+        position: relative;
+    }
+
+    &-Hash {
+        font-size: var(--font-size-s);
+        line-height: var(--line-height-s);
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: none;
+        }
+    }
+
+    &-Expand {
+        font-size: var(--font-size-m);
+        line-height: var(--line-height-m);
+
+        margin-left: auto;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &-Message {
+        width: 75%;
+
+        margin-left: 12px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: auto;
+        }
+    }
+}

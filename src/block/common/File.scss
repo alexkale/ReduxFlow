@@ -1,0 +1,12 @@
+.File {
+    color: var(--text-color-base);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-l);
+
+    text-decoration: none;
+
+    .Icon {
+        display: inline-block;
+        margin-right: 4px;
+    }
+}

@@ -1,0 +1,8 @@
+.Heading {
+    &_level_1 {
+        font-size: var(--font-size-xxl);
+        line-height: var(--line-height-xxl);
+
+        font-weight: var(--font-weight-medium);
+    }
+}

@@ -1,0 +1,86 @@
+.RepoBrowser {
+    &-File {
+        width: 18%;
+        order: 1;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 100%;
+        }
+    }
+
+    &-Commit {
+        width: 19%;
+        order: 2;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: auto;
+
+            order: 3;
+        }
+    }
+
+    &-CommitMessage {
+        width: 35%;
+        order: 3;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 100%;
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            order: 2;
+        }
+    }
+
+    &-Committer {
+        width: 20%;
+        order: 4;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: auto;
+
+            margin-left: 8px;
+            margin-right: 2px;
+
+            // &:before {
+            //     content: 'by';
+            // }
+
+            // &:after {
+            //     content: ',';
+            // }
+        }
+    }
+
+    &-CommitterMob {
+        display: none;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: inline;
+        }
+    }
+
+    &-Updated {
+        width: 8%;
+        order: 5;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: auto;
+        }
+    }
+
+    &-Header {
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: none;
+        }
+    }
+}
+
+/**
+ * 242
+    258
+    476
+    280
+    104
+ */

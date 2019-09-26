@@ -1,0 +1,29 @@
+.tabs {
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-m);
+
+    border-bottom: 1px solid var(--divider-color);
+
+    &__tab {
+        color: var(--color-gray);
+
+        padding-bottom: 10px;
+        margin-right: 32px;
+
+        &_active {
+            position: relative;
+            
+            color: var(--text-color-base);
+            
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -1px;
+                width: 100%;
+                height: 3px;
+                background-color: var(--color-accent-2);
+            }
+        }
+    }
+}

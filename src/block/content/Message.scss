@@ -1,0 +1,40 @@
+.Message {
+    &-Hash, &-Author {
+        display: inline;
+    }
+
+    &-Title {
+        font-size: var(--font-size-m);
+        line-height: var(--line-height-s);
+        font-weight: var(--font-weight-medium);
+
+        margin-bottom: 2px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            max-width: 95%;
+        }
+    }
+
+    &-Text, &-Hash {
+        font-size: var(--font-size-s);
+        line-height: var(--line-height-s);
+    }
+
+    &-Text {
+        margin-bottom: 4px;
+    }
+
+    &-Hash {
+        margin-right: 8px;
+    }
+
+    &-Author {
+        font-size: var(--font-size-s);
+        line-height: var(--line-height-m);
+        color: #434445;
+
+        .Name {
+            color: #434445;
+        }
+    }
+}

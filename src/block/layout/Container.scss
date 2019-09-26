@@ -1,0 +1,17 @@
+.Container {
+    &_flex {
+        display: flex;
+
+        align-items: center;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &_justify {
+        &_space-between {
+            justify-content: space-between;
+        }
+    }
+}

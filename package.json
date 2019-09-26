@@ -1,0 +1,21 @@
+{
+  "name": "reduxflow",
+  "version": "1.0.0",
+  "description": "Для просмотра удобно использовать index.html, который содержит ссылки на все сверстанные экраны.",
+  "main": "init.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

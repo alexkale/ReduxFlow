@@ -1,0 +1,23 @@
+.Footer {
+    color: var(--color-gray);
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+
+    // border-top: 1px solid var(--divider-layout-color);
+
+    padding: 18px 20px 14px 20px;
+
+    display: flex;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        display: none;
+    }
+
+    &-TextLeft {
+        margin-right: auto;
+    }
+
+    &-TextVersion {
+        margin-right: 32px;
+    }
+}

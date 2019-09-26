@@ -1,0 +1,46 @@
+.repo-info {
+    padding-top: 12px;
+
+    &__path {
+        font-size: var(--font-size-xxxl);
+        line-height: var(--line-height-xxxl);
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: var(--font-size-xxl);
+        }
+    }
+
+    &__path-current {
+        font-weight: var(--font-weight-medium);
+
+        margin-right: 4px;
+    }
+
+    &__branch-current {
+        color: var(--color-gray);
+
+        @media (max-width: $breakpoint-mobile) {
+            font-weight: var(--font-weight-light);
+        }
+    }
+
+    &__branch-select {
+        position: relative;
+    }
+
+    &__branch-select-dropdown {
+        position: absolute;
+        top: 7px;
+        right: -17px;
+
+        .Dropdown-Icon {
+            width: 9px;
+        }
+    }
+
+    &__last-commit {
+        margin-top: 10px;
+        font-size: var(--font-size-m);
+        line-height: var(--line-height-m);
+    }
+}

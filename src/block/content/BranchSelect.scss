@@ -1,0 +1,20 @@
+.BranchSelect {
+
+    &-List {
+        min-width: 320px;
+    }
+
+    &-Item {
+        padding-top: 10px;
+
+        margin-bottom: 6px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .Dropdown-Title {
+            font-weight: var(--font-weight-medium);
+        }
+    }
+}

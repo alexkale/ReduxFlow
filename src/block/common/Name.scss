@@ -1,0 +1,9 @@
+.Name {
+    display: inline-block;
+    color: var(--text-color-base);
+    text-decoration: none;
+
+    &::first-letter {
+        color: var(--color-accent-name);
+    }
+}

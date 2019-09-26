@@ -1,0 +1,27 @@
+.Breadcrumbs {
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+
+    padding-top: 12px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--divider-color);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        line-height: var(--line-height-xxl);
+    }
+
+    &-Part {
+        color: var(--color-gray);
+        text-decoration: none;
+    }
+
+    &-Divider {
+        padding: 0px 11px;
+    }
+
+    &-Current {
+        color: var(--text-color-base);
+        font-weight: var(--font-weight-medium);
+    }
+}

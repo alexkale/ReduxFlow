@@ -1,0 +1,20 @@
+.Header {
+    height: 56px;
+    padding-left: var(--content-padding-h);
+    padding-right: var(--content-padding-h);
+
+    border-bottom: 1px solid var(--divider-layout-color);
+
+    &-Logo {
+        width: 118px;
+        height: 20px;
+    }
+
+    &-Item {
+        margin-right: 40px;
+
+        @media (max-width: $breakpoint-mobile) {
+            margin-right: 26px;
+        }
+    }
+}
