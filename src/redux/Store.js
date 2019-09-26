@@ -9,19 +9,45 @@ export default class Store {
     });
   }
 
+  /**
+   * Return current store state
+   */
   getState() {
     return this.state;
   }
 
+  /**
+   * Debug method
+   */
   getListeners() {
     return this.listeners;
   }
 
+  /**
+   * Subscribe to store updates
+   * @param {Function} callback 
+   */
   subscribe(callback) {
-    const l = this.listeners.push(callback);
     return () => {
-      console.log(`Deleting listener ${l}`);
-      this.listeners.splice(l - 1, 0);
+      this.listeners.splice(this.listeners.indexOf(callback), 1);
     };
+  }
+
+  /**
+   * Notify subscribers on state change
+   */
+  runListeners() {
+    this.listeners.forEach((callback) => {
+      callback(this.state);
+    });
+  }
+
+  /**
+   * Dispatch action to store
+   * @param {Object} action 
+   */
+  dispatch(action) {
+    this.state = this.reducer(this.state, action);
+    this.runListeners();
   }
 }
