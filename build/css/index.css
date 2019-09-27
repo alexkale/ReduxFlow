@@ -266,6 +266,9 @@ body {
     color: var(--color-gray); }
     .Button_back .Button-Icon {
       margin-right: 6px; }
+  .Button_search {
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m); }
 
 .Popup {
   display: none;
@@ -316,11 +319,13 @@ body {
   line-height: var(--line-height-s); }
 
 .TextInput {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
   transition: all 0.05s ease-out;
   border: none;
-  padding-bottom: 5px; }
+  padding: 5px;
+  background: #F5F5F5; }
   .TextInput:focus {
-    border-bottom: 2px solid var(--color-accent-2);
     outline: none; }
 
 .RepoSelect {
@@ -789,6 +794,9 @@ body {
     margin-bottom: 0; }
   .BranchSelect-Item .Dropdown-Title {
     font-weight: var(--font-weight-medium); }
+
+.Search-Button {
+  margin-left: 16px; }
 
 .Highlight_java_comment {
   color: #008F00; }

@@ -1,12 +1,15 @@
 .TextInput {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+
   transition: all 0.05s ease-out;
 
   border: none;
 
-  padding-bottom: 5px;
+  padding: 5px;
+  background: #F5F5F5; 
 
   &:focus {
-    border-bottom: 2px solid var(--color-accent-2);
     outline: none;
   }
 }
