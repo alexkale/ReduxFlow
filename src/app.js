@@ -1,7 +1,7 @@
 import Store from './redux/Store';
 
 import RepoBrowserView from './components/RepoBrowser/RepoBrowserView';
-import SearchView from './components/search/SearchView';
+import SearchView from './components/Search/SearchView';
 
 import rootReducer from './rootReducer';
 
