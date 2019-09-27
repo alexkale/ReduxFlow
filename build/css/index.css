@@ -118,12 +118,12 @@ body {
   cursor: pointer;
   width: 12px;
   height: 12px;
-  background-image: url("/assets/arrow.svg");
+  background-image: url("../../assets/arrow.svg");
   background-repeat: no-repeat;
   background-position: center center; }
 
 .Dropdown_active .Dropdown-Icon {
-  background-image: url("/assets/arrow-up.svg"); }
+  background-image: url("../../assets/arrow-up.svg"); }
 
 .Dropdown-List {
   position: relative;
