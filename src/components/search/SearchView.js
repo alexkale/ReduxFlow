@@ -14,6 +14,7 @@ export default class SearchView extends View {
 
     this.onSearchBtnClick = this.onSearchBtnClick.bind(this);
 
+    // Handle events in the root element for this view because of re-renders
     this.el.addEventListener('click', this.onSearchBtnClick);
   }
 
@@ -22,6 +23,10 @@ export default class SearchView extends View {
     this.el.removeEventListener('click', this.onSearchBtnClick);
   }
 
+  /**
+   * Handles Search button click
+   * @param {Event} event 
+   */
   onSearchBtnClick(event) {
     if (event.target.tagName === 'BUTTON') {
       this.store.dispatch({
