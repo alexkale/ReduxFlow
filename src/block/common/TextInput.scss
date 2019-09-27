@@ -1,0 +1,12 @@
+.TextInput {
+  transition: all 0.05s ease-out;
+
+  border: none;
+
+  padding-bottom: 5px;
+
+  &:focus {
+    border-bottom: 2px solid var(--color-accent-2);
+    outline: none;
+  }
+}

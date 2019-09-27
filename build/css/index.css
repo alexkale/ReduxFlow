@@ -86,6 +86,8 @@ body {
     @media (max-width: 360px) {
       .Header-Item {
         margin-right: 26px; } }
+  .Header-Search {
+    margin-left: auto; }
 
 .Container_flex {
   display: flex;
@@ -312,6 +314,14 @@ body {
 .Paragraph {
   font-size: var(--font-size-m);
   line-height: var(--line-height-s); }
+
+.TextInput {
+  transition: all 0.05s ease-out;
+  border: none;
+  padding-bottom: 5px; }
+  .TextInput:focus {
+    border-bottom: 2px solid var(--color-accent-2);
+    outline: none; }
 
 .RepoSelect {
   position: relative;

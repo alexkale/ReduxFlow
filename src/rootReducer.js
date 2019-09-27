@@ -159,8 +159,13 @@ const rootReducer = (action, state = defaultState) => {
     case '@@init':
       console.log('Setting default state', defaultState);
       return defaultState;
-    case UPDATE_FILE_SEARCH_STRING:
-      return { ...state, searchString: action.searchString };
+    case UPDATE_FILE_SEARCH_STRING: {
+      console.log(`Setting new searchString: ${action.searchString}`);
+      const shownFiles = state.files
+        .filter((file) => file.name.startsWith(action.searchString))
+        .map((file) => file.id);
+      return { ...state, shownFiles, searchString: action.searchString };
+    }
     default:
       return state;
   }

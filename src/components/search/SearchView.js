@@ -31,7 +31,7 @@ export default class SearchView extends View {
     if (event.target.tagName === 'BUTTON') {
       this.store.dispatch({
         type: UPDATE_FILE_SEARCH_STRING,
-        searchString: this.el.querySelector('input').value,
+        searchString: this.el.querySelector('input').value.trim(),
       });
     }
   }
@@ -39,7 +39,7 @@ export default class SearchView extends View {
   render(state) {
     console.log('Search view rendering with state', state);
     return `
-        <input type="text" class="Search-Input" placeholder="Search files..." value=${state.searchString}>
+        <input type="text" class="Search-Input TextInput" placeholder="Search files..." value=${state.searchString}>
         <button class="Button Button_search">Search</button>`;
   }
 }

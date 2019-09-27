@@ -7,6 +7,6 @@ import rootReducer from './rootReducer';
 
 document.addEventListener('DOMContentLoaded', () => {
   const store = new Store(rootReducer);
-  const repoBrowserView = new RepoBrowserView(document.querySelector('.RepoBrowserView'), store);
-  const searchView = new SearchView(document.querySelector('.SearchView'), store);
+  const repoBrowserView = new RepoBrowserView(document.querySelector('.RepoBrowser'), store);
+  const searchView = new SearchView(document.querySelector('.Search'), store);
 });
