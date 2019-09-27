@@ -86,6 +86,8 @@ body {
     @media (max-width: 360px) {
       .Header-Item {
         margin-right: 26px; } }
+    .Header-Item:last-child {
+      margin-right: 0px; }
   .Header-Search {
     margin-left: auto; }
 
