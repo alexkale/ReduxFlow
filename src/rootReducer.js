@@ -1,6 +1,6 @@
 import { cloneDeep } from 'lodash';
 
-import { UPDATE_FILE_SEARCH_STRING } from "./ActionsTypes";
+import { UPDATE_FILE_SEARCH_STRING, FETCH_FILES_START } from "./ActionsTypes";
 
 // TO-DO: Move to file
 
@@ -157,6 +157,9 @@ const rootReducer = (action, state = defaultState) => {
   switch (action.type) {
     case '@@init':
       return defaultState;
+    case FETCH_FILES_START:
+      // not implemented
+      return state;
     case UPDATE_FILE_SEARCH_STRING: {
       const newState = cloneDeep(state);
       const shownFiles = state.files
