@@ -1,3 +1,5 @@
+import { cloneDeep } from 'lodash';
+
 import { UPDATE_FILE_SEARCH_STRING } from "./ActionsTypes";
 
 // TO-DO: Move to file
@@ -154,17 +156,17 @@ const defaultState = {
 const rootReducer = (action, state = defaultState) => {
   console.log('rootReducer called for action', action);
 
-  // TO-DO: use lodash to deep copy state objects
   switch (action.type) {
     case '@@init':
       console.log('Setting default state', defaultState);
       return defaultState;
     case UPDATE_FILE_SEARCH_STRING: {
       console.log(`Setting new searchString: ${action.searchString}`);
+      const newState = cloneDeep(state);
       const shownFiles = state.files
         .filter((file) => file.name.startsWith(action.searchString))
         .map((file) => file.id);
-      return { ...state, shownFiles, searchString: action.searchString };
+      return { ...newState, shownFiles, searchString: action.searchString };
     }
     default:
       return state;

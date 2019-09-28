@@ -6,8 +6,10 @@ import SearchView from './components/Search/SearchView';
 import rootReducer from './rootReducer';
 
 const KEY_CODES = {
-  'ENTER': 13,
+  ENTER: 13,
 };
+
+// TO-DO: middleware
 
 /**
  * App setup
