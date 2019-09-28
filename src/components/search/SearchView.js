@@ -37,7 +37,6 @@ export default class SearchView extends View {
   }
 
   render(state) {
-    console.log('Search view rendering with state', state);
     return `
         <input type="text" class="Search-Input TextInput" placeholder="Search files..." value=${state.searchString}>
         <button class="Search-Button Button Button_search">Search</button>`;

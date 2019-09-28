@@ -154,14 +154,10 @@ const defaultState = {
 // TO-DO: combineReducers()
 
 const rootReducer = (action, state = defaultState) => {
-  console.log('rootReducer called for action', action);
-
   switch (action.type) {
     case '@@init':
-      console.log('Setting default state', defaultState);
       return defaultState;
     case UPDATE_FILE_SEARCH_STRING: {
-      console.log(`Setting new searchString: ${action.searchString}`);
       const newState = cloneDeep(state);
       const shownFiles = state.files
         .filter((file) => file.name.startsWith(action.searchString))

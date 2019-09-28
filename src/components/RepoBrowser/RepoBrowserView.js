@@ -3,7 +3,6 @@ import View from '../../redux/View';
 
 export default class RepoBrowserView extends View {
   render({ files, commits, shownFiles }) {
-    console.log('VIEW', this.constructor.name, 'render method called');
     const fileList = shownFiles.map((id) => {
       const file = files[id];
       const commit = commits[file.commit];
