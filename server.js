@@ -5,10 +5,10 @@ const app = express();
 
 const mockData = require('./mock-data');
 
-app.use(express.static(path.resolve(__dirname, 'build')));
+app.use(express.static(path.resolve(__dirname, 'dist')));
 
 // Mocked
-app.get('/api/repos/task-1', (req, res) => {
+app.get('/api/repos/arcadia', (req, res) => {
   res.status(200);
   res.json(mockData);
 });

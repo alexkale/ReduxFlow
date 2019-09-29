@@ -29,7 +29,7 @@ export const fetchFilesFailed = (error) => ({
 export const searchFiles = (searchString) => (dispatch) => {
   dispatch({ type: FETCH_FILES_START });
 
-  fetch('http://localhost:3000/api/repos/task-1')
+  fetch('/api/repos/arcadia/')
     .then((response) => {
       if (!response.ok) {
         throw new Error('Error fetching files');
