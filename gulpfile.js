@@ -11,4 +11,4 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('default', gulp.parallel('sass'));
+gulp.task('default', gulp.series('sass'));
