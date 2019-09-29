@@ -9,7 +9,6 @@ const defaultState = {
   ],
   commits: {
   },
-  shownFiles: [],
   searchString: '',
 };
 
@@ -25,7 +24,6 @@ const rootReducer = (action, state = defaultState) => {
     case FETCH_FILES_SUCCESS: {
       const newState = {
         ...action.json,
-        shownFiles: Array.from(Array(action.json.files.length).keys()),
       };
       return newState;
     }

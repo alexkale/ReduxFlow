@@ -29,7 +29,10 @@ export const fetchFilesFailed = (error) => ({
 export const searchFiles = (searchString) => (dispatch) => {
   dispatch({ type: FETCH_FILES_START });
 
-  fetch('/api/repos/arcadia/')
+  const url = new URL('http://localhost:3000');
+  url.searchParams.append({ searchString });
+
+  fetch(url)
     .then((response) => {
       if (!response.ok) {
         throw new Error('Error fetching files');
