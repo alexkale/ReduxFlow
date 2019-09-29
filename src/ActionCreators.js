@@ -1,4 +1,4 @@
-import { UPDATE_FILE_SEARCH_STRING, FETCH_FILES_START } from './ActionsTypes';
+import { UPDATE_FILE_SEARCH_STRING, FETCH_FILES_START, FETCH_FILES_SUCCESS, FETCH_FILES_FAILED } from './ActionsTypes';
 
 /**
  * @param {string} searchString
@@ -16,7 +16,27 @@ export const fetchFilesStart = () => ({
   type: FETCH_FILES_START,
 });
 
-export const updateShownFiles = (searchString) => (dispatch) => {
+export const fetchFilesSuccess = (json) => ({
+  type: FETCH_FILES_SUCCESS,
+  json,
+});
+
+export const fetchFilesFailed = (error) => ({
+  type: FETCH_FILES_FAILED,
+  error,
+});
+
+export const searchFiles = (searchString) => (dispatch) => {
   dispatch({ type: FETCH_FILES_START });
-  setTimeout(dispatch, 500, updateFileSearchString(searchString));
+
+  fetch('http://localhost:3000/api/repos/task-1')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Error fetching files');
+      } else {
+        return response.json();
+      }
+    })
+    .then((json) => dispatch(fetchFilesSuccess({ ...json, searchString })))
+    .catch((err) => dispatch(fetchFilesFailed(err)));
 };

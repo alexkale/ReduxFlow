@@ -1,6 +1,6 @@
 import { cloneDeep } from 'lodash';
 
-import { UPDATE_FILE_SEARCH_STRING, FETCH_FILES_START } from "./ActionsTypes";
+import { UPDATE_FILE_SEARCH_STRING, FETCH_FILES_START, FETCH_FILES_SUCCESS } from "./ActionsTypes";
 
 // TO-DO: Move to file
 
@@ -160,6 +160,15 @@ const rootReducer = (action, state = defaultState) => {
     case FETCH_FILES_START:
       // not implemented
       return state;
+    case FETCH_FILES_SUCCESS: {
+      console.log('fetch files success in reducer, json: ', action.json);
+      const newState = {
+        ...action.json,
+        shownFiles: Array.from(Array(action.json.files.length).keys()),
+      };
+      console.log('New state', newState);
+      return newState;
+    }
     case UPDATE_FILE_SEARCH_STRING: {
       const newState = cloneDeep(state);
       const shownFiles = state.files
