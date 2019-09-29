@@ -3,8 +3,7 @@ import View from '../../redux/View';
 
 export default class RepoBrowserView extends View {
   render({ files, commits }) {
-    const fileList = files.map((id) => {
-      const file = files[id];
+    const fileList = files.map((file) => {
       const commit = commits[file.commit];
       return `
       <div class="Table-Row Table-Row_padding_h Table-Row_padding_v Table-Row_border_bottom">
@@ -13,11 +12,11 @@ export default class RepoBrowserView extends View {
                 <span class="Icon">
                     <img src="../assets/${file.type}.svg">                                      
                 </span>
-                <span>${files[id].name}</span>
+                <span>${file.name}</span>
             </a>
         </div>
         <div class="Table-Cell RepoBrowser-Commit">
-            <a href="#" class="Link">${files[id].commit}</a>
+            <a href="#" class="Link">${files.commit}</a>
         </div>
         <div class="Table-Cell RepoBrowser-CommitMessage">
             ${commit.message}
