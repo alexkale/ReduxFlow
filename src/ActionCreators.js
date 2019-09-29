@@ -1,13 +1,4 @@
-import { UPDATE_FILE_SEARCH_STRING, FETCH_FILES_START, FETCH_FILES_SUCCESS, FETCH_FILES_FAILED } from './ActionsTypes';
-
-/**
- * @param {string} searchString
- * @returns {ACTION_UPDATE_FILE_SEARCH_STRING}
- */
-export const updateFileSearchString = (searchString) => ({
-  type: UPDATE_FILE_SEARCH_STRING,
-  searchString,
-});
+import { FETCH_FILES_START, FETCH_FILES_SUCCESS, FETCH_FILES_FAILED } from './ActionsTypes';
 
 /**
  * @returns {ACTION_FETCH_FILES_START}
@@ -26,12 +17,12 @@ export const fetchFilesFailed = (error) => ({
   error,
 });
 
-export const searchFiles = (searchString) => (dispatch) => {
-  dispatch({ type: FETCH_FILES_START });
+export const searchFiles = (searchString = '') => (dispatch) => {
+  dispatch({ type: FETCH_FILES_START, searchString });
 
   const url = new URL('http://localhost:3000/api/repos/arcadia');
-  url.searchParams.append('search', searchString);
-  
+  if (searchString) url.searchParams.append('search', searchString);
+
   fetch(url)
     .then((response) => {
       if (!response.ok) {

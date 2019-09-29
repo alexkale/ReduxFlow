@@ -10,6 +10,7 @@ import RepoBrowserView from './components/RepoBrowser/RepoBrowserView';
 import SearchView from './components/Search/SearchView';
 
 import rootReducer from './rootReducer';
+import { searchFiles } from './ActionCreators';
 
 const KEY_CODES = {
   ENTER: 13,
@@ -33,4 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  store.dispatch(searchFiles());
 });

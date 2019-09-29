@@ -16,7 +16,7 @@ export default class RepoBrowserView extends View {
             </a>
         </div>
         <div class="Table-Cell RepoBrowser-Commit">
-            <a href="#" class="Link">${files.commit}</a>
+            <a href="#" class="Link">${file.commit}</a>
         </div>
         <div class="Table-Cell RepoBrowser-CommitMessage">
             ${commit.message}
