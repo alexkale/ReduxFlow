@@ -2,4 +2,3 @@
 .eslintrc.js
 node_modules
 .vscode
-build/files.html
