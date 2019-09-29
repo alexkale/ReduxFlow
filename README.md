@@ -2,7 +2,7 @@
 Пример реализации архитектуры Redux
 
 ## Использование
-1. git clone https://github.com/alexkale/ReduxFlow
+1. ```git clone https://github.com/alexkale/ReduxFlow```
 2. Установить зависимости: ```npm install```
 3. Запустить сервер: ```npm run server```
 4. Страница доступна по адресу http://localhost:3000
