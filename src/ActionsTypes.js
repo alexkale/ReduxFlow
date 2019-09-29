@@ -12,3 +12,8 @@ export const FETCH_FILES_START = 'FETCH_FILES_START';
  * @property {string} searchString
  */
 export const UPDATE_FILE_SEARCH_STRING = 'UPDATE_FILE_SEARCH_STRING';
+
+
+export const FETCH_FILES_SUCCESS = 'FETCH_FILES_SUCCESS';
+
+export const FETCH_FILES_FAILED = 'FETCH_FILES_FAILED';

@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import View from '../../redux/View';
 
-import { updateFileSearchString } from '../../ActionCreators';
+import { searchFiles } from '../../ActionCreators';
 
 export default class SearchView extends View {
   /**
@@ -29,7 +29,7 @@ export default class SearchView extends View {
    */
   onSearchBtnClick(event) {
     if (event.target.tagName === 'BUTTON') {
-      this.store.dispatch(updateFileSearchString(this.el.querySelector('input').value));
+      this.store.dispatch(searchFiles(this.el.querySelector('input').value));
     }
   }
 
